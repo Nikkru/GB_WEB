@@ -29,17 +29,28 @@ confirm("Вам хорошо живется?") ? alert("Тогда мы идем
 */
 
 // task 4
+/*
 const product = prompt("Введите название продукта")
 switch (product) {
     case "Мандарины":
         alert("Мандарины стоят 100 рублей за колограмм")
         break
     case "Бананы":
-        alert("Бананы и груши стоят 100 рублей за колограмм")
-        break
     case "Груши":
         alert("Бананы и груши стоят 100 рублей за колограмм")
         break
     default:
         alert("Нет такого продукта")
 }
+*/
+// Задача 5
+function getMaxEvenElement(arr) {
+    let max = arr[0];
+    for (i = 2; i < arr.length; i += 2) {
+        if (max < arr[i]) 
+            max = arr[i]
+    }
+    return max;
+}
+console.log(getMaxEvenElement([4, 7, -1, 12, 3, 0]));
+console.log(getMaxEvenElement([6, -12, 29, 6, 32, 92, -50]));
