@@ -26,3 +26,4 @@ function convertCelsiustoFarenheit(celsius) {
 }
 temperature = prompt("Введите значение температурв по Цельсиусу")
 alert(`Цельсий: ${temperature}, Фаренгейт: ${Math.round(convertCelsiustoFarenheit(temperature)*10)/10}`)
+
