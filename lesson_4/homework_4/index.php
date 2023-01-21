@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <?php
-$name = "Tom";
+$name = "Tom Soyer";
 $profession = "Tester";
 $country_city = "Russia, SPb";
 $email = "tom@ya.ru";
@@ -24,13 +24,20 @@ $skills = [
 ];
 $resume = [
 ['employ' => 'Фронт Энд Разработчик',
-'data' => ['Июнь 2015', 'Текущая']
+'data' => ['Июнь 2015', 'Текущая'],
+'description' => 'Lorem ipsum dolor sit amet. Praesentium magnam consectetur vel in deserunt aspernatur est
+                        reprehenderit sunt hic. Nulla tempora soluta ea et odio, unde doloremque repellendus iure,
+                        iste.'
 ],
 ['employ' => 'Вэб Разработчик',
-'data' => ['Март 2012', 'Декабрь 2014']
+'data' => ['Март 2012', 'Декабрь 2014'],
+'description' => 'Consectetur adipisicing elit. Praesentium magnam consectetur vel in deserunt aspernatur est
+                        reprehenderit sunt hic. Nulla tempora soluta ea et odio, unde doloremque repellendus iure,
+                        iste.'
 ],
 ['employ' => 'Графический Дизайнер',
-'data' => ['Июнь 2010', 'Март 2012']
+'data' => ['Июнь 2010', 'Март 2012'],
+'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.'
 ]
 ]
 ?>
@@ -134,9 +141,7 @@ $resume = [
                     <h5 class="w3-opacity"><b><?php echo $resume[$i]["employ"] ?></b></h5>
                     <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i><?php echo $resume[$i]["data"][0] ?> - <span
                             class="w3-tag w3-teal w3-round"><?php echo $resume[$i]["data"][1] ?></span></h6>
-                    <p>Lorem ipsum dolor sit amet. Praesentium magnam consectetur vel in deserunt aspernatur est
-                        reprehenderit sunt hic. Nulla tempora soluta ea et odio, unde doloremque repellendus iure,
-                        iste.</p>
+                    <p><?php echo $resume[$i]["description"] ?></p>
                     <hr>
                     <?php endfor ?>
                 </div>
