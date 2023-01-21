@@ -139,8 +139,12 @@ $resume = [
                 <div class="w3-container">
                 <?php for ($i = 0; $i < count($resume); $i++) : ?>
                     <h5 class="w3-opacity"><b><?php echo $resume[$i]["employ"] ?></b></h5>
-                    <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i><?php echo $resume[$i]["data"][0] ?> - <span
-                            class="w3-tag w3-teal w3-round"><?php echo $resume[$i]["data"][1] ?></span></h6>
+                    <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i><?php echo $resume[$i]["data"][0] ?> - <?php if ($i==0): ?><span
+                            class="w3-tag w3-teal w3-round"><?php echo $resume[$i]["data"][1] ?></span>
+                            <?php else: ?>
+                            <?php echo $resume[$i]["data"][1] ?>
+                            <?php endif ?>
+                            </h6>
                     <p><?php echo $resume[$i]["description"] ?></p>
                     <hr>
                     <?php endfor ?>
